@@ -1,12 +1,13 @@
-import urlparse from 'url-parse';
+import urlparse from 'url';
 
 export namespace ConnectionUrl {
   export function sanitize(url: string): string {
-    const parsedUrl = urlparse(url);
-    const { password } = parsedUrl;
+    const parsedUrl = urlparse.parse(url);
+    const { auth } = parsedUrl;
+    var [username, password] = auth.split(":")
     if (password && password !== '') {
-      parsedUrl.set('password', '•••••••');
+      password = '•••••••';
     }
-    return parsedUrl.href;
+    return `${parsedUrl.protocol}//${username}:${password}@${parsedUrl.host}${parsedUrl.path}`
   }
 }
