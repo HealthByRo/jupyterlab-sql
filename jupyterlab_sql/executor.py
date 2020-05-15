@@ -41,9 +41,14 @@ class Executor:
             )
         engine = self._get_engine(connection_url)
         inspector = inspect(engine)
+        views = inspector.get_view_names()
+        tables = inspector.get_table_names()
+        views.sort()
+        tables.sort()
+
         database_objects = DatabaseObjects(
-            tables=inspector.get_table_names(),
-            views=inspector.get_view_names(),
+            tables=tables,
+            views=views,
         )
         return database_objects
 
