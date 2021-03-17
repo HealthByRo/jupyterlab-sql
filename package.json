@@ -37,7 +37,7 @@
   "dependencies": {
     "@jupyterlab/application": "^1.1.0",
     "@jupyterlab/codeeditor": "^1.1.0",
-    "@jupyterlab/launcher": "^1.1.0",
+    "@jupyterlab/launcher": "^1.2.9",
     "@phosphor/datagrid": "^0.1.6",
     "@phosphor/messaging": "^1.2.3",
     "@phosphor/widgets": "^1.8.0",
