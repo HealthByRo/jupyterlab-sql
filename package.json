@@ -35,7 +35,7 @@
     "test:changed": "jest -o"
   },
   "dependencies": {
-    "@jupyterlab/application": "^1.1.0",
+    "@jupyterlab/application": "^1.2.9",
     "@jupyterlab/codeeditor": "^1.1.0",
     "@jupyterlab/launcher": "^1.1.0",
     "@phosphor/datagrid": "^0.1.6",
